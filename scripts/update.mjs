@@ -4,6 +4,12 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
+// One entry per line so the map stays readable and diffable; values compact.
+function stringifyMap(map) {
+  const rows = Object.entries(map).map(([key, value]) => `  ${JSON.stringify(key)}: ${JSON.stringify(value)}`);
+  return rows.length ? `{\n${rows.join(",\n")}\n}\n` : "{}\n";
+}
+
 const ROOT = new URL("..", import.meta.url);
 const MAP_PATH = process.env.GGMAP_MAP ? pathToFileURL(process.env.GGMAP_MAP) : new URL("data/animegg-map.json", ROOT);
 const STATE_PATH = process.env.GGMAP_STATE ? pathToFileURL(process.env.GGMAP_STATE) : new URL("data/state.json", ROOT);
@@ -186,7 +192,7 @@ async function main() {
   }
 
   await Promise.all(Array.from({ length: CONCURRENCY }, loop));
-  writeFileSync(MAP_PATH, `${JSON.stringify(map)}\n`);
+  writeFileSync(MAP_PATH, stringifyMap(map));
   writeFileSync(STATE_PATH, `${JSON.stringify({ seen: index.map((e) => e.id).sort((a, b) => a - b) })}\n`);
   log(`done: added ${added}, errors ${failed}, map ${Object.keys(map).length}`);
 }
