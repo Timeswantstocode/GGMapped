@@ -2,8 +2,21 @@ name: update
 
 on:
   schedule:
-    - cron: "23 5 * * *"
+    - cron: "37 * * * *"
   workflow_dispatch:
+    inputs:
+      backfill:
+        description: Revisit the legacy scanned ids once
+        type: boolean
+        default: false
+      budget_minutes:
+        description: "Minutes for this run; default 15 normal / 300 backfill"
+        type: string
+        default: ""
+      ids:
+        description: "Comma separated AniList ids (repair run)"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -15,9 +28,16 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: ${{ github.event.inputs.backfill == 'true' && 360 || 45 }}
+    env:
+      GGMAP_BACKFILL: ${{ github.event.inputs.backfill == 'true' && '1' || '' }}
+      GGMAP_BUDGET_MINUTES: ${{ github.event.inputs.budget_minutes || (github.event.inputs.backfill == 'true' && '300' || '15') }}
+      GGMAP_IDS: ${{ github.event.inputs.ids }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
       - run: node scripts/update.mjs
@@ -28,4 +48,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data
           git diff --quiet --cached || git commit -m "chore: map new animegg titles"
+          git pull --rebase --autostash
           git push
