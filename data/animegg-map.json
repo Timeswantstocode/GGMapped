@@ -7581,7 +7581,7 @@
   "yubisaki-to-renren": {"title":"Yubisaki to Renren","id":166794},
   "henjin-no-salad-bowl": {"title":"Henjin no Salad Bowl","id":166828},
   "yami-shibai-11": {"title":"Yami Shibai 11","id":166829},
-  "mushoku-tensei-ii-isekai-ittara-honki-dasu": {"title":"Mushoku Tensei II: Isekai Ittara Honki Dasu","id":166873,"dubSlug":"mushoku-tensei-ii-isekai-ittara-honki-dasu-dub"},
+  "mushoku-tensei-ii-isekai-ittara-honki-dasu": {"title":"Mushoku Tensei II: Isekai Ittara Honki Dasu","id":146065,"dubSlug":"mushoku-tensei-ii-isekai-ittara-honki-dasu-dub"},
   "bokura-no-ameiro-protocol": {"title":"Bokura no Ameiro Protocol","id":166896},
   "the-fable": {"title":"The Fable","id":166910,"dubSlug":"the-fable-dub"},
   "doraemon-movie-43-nobita-no-chikyuu-symphony": {"title":"Doraemon Movie 43: Nobita no Chikyuu Symphony","id":166976},
@@ -8303,7 +8303,7 @@
   "ranma-12": {"title":"Ranma 1/2","seasons":[{"id":210,"start":1,"end":18},{"id":149939,"start":19,"end":161}],"dubSlug":"ranma-12-dub"},
   "the-big-o": {"title":"The Big O","seasons":[{"id":567,"start":1,"end":13},{"id":129608,"start":14,"end":26}],"dubSlug":"the-big-o-dub"},
   "bleach-sennen-kessen-hen": {"title":"Bleach: Thousand-Year Blood War","seasons":[{"id":116674,"start":1,"end":13},{"id":159322,"start":14,"end":26}],"dubSlug":"bleach-sennen-kessen-hen-dub"},
-  "dr-stone-science-future": {"title":"Dr. Stone: Science Future","seasons":[{"id":105333,"start":1,"end":24},{"id":113936,"start":25,"end":35}],"dubSlug":"dr-stone-science-future-dub"},
+  "dr-stone-science-future": {"title":"Dr. Stone: Science Future","seasons":[{"id":172019,"start":1,"end":12},{"id":189117,"start":13,"end":24},{"id":199221,"start":25,"end":37}],"dubSlug":"dr-stone-science-future-dub"},
   "wind-breaker": {"title":"Wind Breaker","seasons":[{"id":163270,"start":1,"end":13},{"id":178680,"start":14,"end":25}],"dubSlug":"wind-breaker-dub"},
   "unnamed-memory": {"title":"Unnamed Memory","seasons":[{"id":158709,"start":1,"end":12},{"id":178550,"start":13,"end":24}]},
   "chitose-is-in-the-ramune-bottle": {"title":"Chitose Is in the Ramune Bottle","seasons":[{"id":180082,"start":1,"end":13},{"id":198727,"start":14,"end":24}]},
@@ -8316,11 +8316,11 @@
   "future-boy-conan": {"title":"Future Boy Conan","id":302,"source":"fleet"},
   "gochuumon-wa-usagi-desu-ka": {"title":"Is the Order a Rabbit?","id":20517,"source":"fleet"},
   "hentai-ouji-to-warawanai-neko-specials": {"title":"The \"Hentai\" Prince and the Stony Cat.: Henneko BBS","id":20608,"source":"fleet"},
-  "iii-icecrin-season-2": {"title":"iii icecrin","id":130514,"source":"fleet"},
   "inuyasha": {"title":"InuYasha","id":249,"source":"fleet"},
   "sasami-mahou-shoujo-club": {"title":"Sasami Magical Girls Club","id":1881,"source":"fleet"},
   "youkai-ningen-bem-2006": {"title":"Humanoid Monster Bem (2006)","id":4823,"source":"fleet"},
   "hyakushou-kizoku-season-4": {"title":"Hyakushou kizoku season 4","id":204348,"source":"fleet2"},
   "one-piece-movie-13-film-gold": {"title":"One Piece Movie 13: Film Gold","id":21335,"source":"fleet2"},
-  "saiunkoku-monogatari-season-2": {"title":"Saiunkoku Monogatari Season 2","id":1914,"source":"fleet2"}
+  "saiunkoku-monogatari-season-2": {"title":"Saiunkoku Monogatari Season 2","id":1914,"source":"fleet2"},
+  "mushoku-tensei-ii-isekai-ittara-honki-dasu-part-2": {"title":"Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2","id":166873}
 }
